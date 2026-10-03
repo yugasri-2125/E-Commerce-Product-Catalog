@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* NAVBAR */
+
+header {
+    background: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+.cart-btn {
+    background: #2563eb;
+    color: white;
+
+    border: none;
+    padding: 10px 16px;
+
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#cartCount {
+    background: white;
+    color: #2563eb;
+
+    padding: 2px 7px;
+    border-radius: 50%;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.shop-btn {
+    display: inline-block;
+
+    background: white;
+    color: #2563eb;
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* PRODUCTS */
+
+.products-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.products-section h2,
+.about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.controls input,
+.controls select {
+    padding: 13px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.controls input {
+    flex: 1;
+}
+
+
+/* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+
+    background: #eef2ff;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 8px;
+}
+
+.category {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin: 12px 0;
+}
+
+.add-btn {
+    width: 100%;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: white;
+
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ABOUT */
+
+.about {
+    background: white;
+
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 2000;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+
+    width: 90%;
+    max-width: 500px;
+
+    margin: 8% auto;
+
+    padding: 30px;
+
+    border-radius: 12px;
+}
+
+.close {
+    float: right;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #16a34a;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+}
